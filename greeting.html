@@ -11,10 +11,20 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
      <script type="text/babel">
        class Greeting extends React.Component {
+
+         constructor(props){
+           super(props);
+           this.state = {
+             text: "Voila"
+           }
+         }
+
          render () {
            return (
            <div>
               <h1>Hello {this.props.name}!</h1>
+              <h2>Props Example! {this.props.text}</h2>
+              <h3>State Example! {this.state.text}</h3>
            </div>
           );
          }
